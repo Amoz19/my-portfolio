@@ -8,7 +8,7 @@ import { ModelContextProvider } from './context/ModelContext.jsx'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ModelContextProvider>
-      <App />
+      <App/>
     </ModelContextProvider>
     
   </React.StrictMode>,

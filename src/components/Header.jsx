@@ -1,5 +1,9 @@
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import { faCaretDown, faSun,faXmark } from '@fortawesome/free-solid-svg-icons';
+// import { faCaretDown, faSun,faXmark } from '@fortawesome/free-solid-svg-icons';
+import { BiSun,BiChevronDown } from "react-icons/bi";
+import { RxCross2 } from "react-icons/rx";
+
+
 
 import { NavLink } from "react-router-dom";
 import { ModelContext } from '../context/ModelContext';
@@ -27,14 +31,14 @@ const MenuIcon = () => {
             onClick={() => setIsOpen(true)}
          >
             <button className="mr-3">Menu</button>
-            <FontAwesomeIcon icon={faCaretDown}/>
+            <BiChevronDown />
         </div>
     )
 }
 
 const LightDarkIcon = () => {
     return(
-        <button className='bg-white rounded-full px-4 py-2 shadow-sm text-stone-950'><FontAwesomeIcon icon={faSun}/></button>
+        <button className='bg-white rounded-full px-4 py-2 shadow-sm text-stone-950'><BiSun /></button>
     )
 }
 
@@ -73,7 +77,7 @@ const MobileMenu = () => {
         <>
             <div className='px-8 py-5 opacity-60 flex justify-between'>
                 <p>Menu</p>
-                <FontAwesomeIcon icon={faXmark} onClick={() => setIsOpen(false)}/>
+                <RxCross2 onClick={() => setIsOpen(false)}/>
             </div>
             <Menu item={navigation} style={activeClass}/>
         </>
@@ -86,7 +90,7 @@ const Header = () => {
    const {isOpen} = useContext(ModelContext);
    console.log(isOpen);
     return ( 
-        <nav className="flex items-center justify-between bg-[whitesmoke] px-10 py-3">
+        <nav className="flex items-center justify-between bg-[whitesmoke] px-5 md:px-10 py-3">
             <Logo />
             <div className='flex justify-between items-center xl:w-2/4 md:w-3/4'>
                 <div className="hidden md:flex  bg-black rounded-full">
