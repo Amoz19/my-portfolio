@@ -58,11 +58,16 @@ const Menu = ({item,style}) => {
 
 const DesktopMenu = () => {
     const activeClass = ({isActive}) => `
-        w-30 p-2 px-5  text-center font-medium border-r-2 border-slate-200 last:border-0 hover:text-yellow-300
-        ${isActive ? 'text-yellow-300' : 'text-white'}
+         py-2 px-5 text-center font-medium rounded-full
+        ${isActive ? 'bg-white text-black' : 'text-white'}
         `;
     return(
-        <Menu item={navigation} style={activeClass}/>
+        <>
+            <div className='w-auto bg-black py-3 px-4 rounded-full'>
+                <Menu item={navigation} style={activeClass}/>
+            </div>
+        </>
+       
     )
 }
 

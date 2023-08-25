@@ -22,9 +22,9 @@ const Home = () => {
                             <span className="text-l text-slate-800">Hello, I Am</span>
                             <span className="text-xl p-2 text-shadow">Aung Mon</span>
                         </p>
-                        <p className="text-slate-800 text-l mt-4 px-8">Specializes in PERN, MERN stack, NEXTJS and can easily adapt to new technologies.</p>
-                        <p className="text-2xl mt-6 mb-4 text-center">Full-Stack Developer</p>
-                        <div className="flex mb-4">
+                        <p className="text-slate-800 text-l mt-1 px-8">Specializes in PERN, MERN stack, NEXTJS and can easily adapt to new technologies.</p>
+                        <p className="text-2xl my-4 mb-4 text-center">Full-Stack Developer</p>
+                        <div className="flex">
                             <Icon>Download Cv<BsCloudDownload className="inline ml-1 text-xl"/></Icon>
                             <Icon>Explore Projects<VscSearch className="inline ml-1 text-xl"/></Icon>
                         </div>
