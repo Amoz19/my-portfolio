@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --tw-shadow-color: #fff732; /* Replace with your desired shadow color */
+}

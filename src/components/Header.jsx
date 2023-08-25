@@ -90,7 +90,7 @@ const Header = () => {
    const {isOpen} = useContext(ModelContext);
    console.log(isOpen);
     return ( 
-        <nav className="flex items-center justify-between bg-[whitesmoke] px-5 md:px-10 py-3">
+        <nav className="flex items-center justify-between bg-[whitesmoke] px-5 lg:px-12 py-3">
             <Logo />
             <div className='flex justify-between items-center xl:w-2/4 md:w-3/4'>
                 <div className="hidden md:flex  bg-black rounded-full">

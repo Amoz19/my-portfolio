@@ -15,23 +15,26 @@ const Icon = (props) => {
 const Home = () => {
     return ( 
        <>
-            <section className="h- inset-0 flex flex-col m-5 md:mx-10 md:items-center">
-                <p>
-                    <span className="text-l text-slate-800">Hello, I Am</span>
-                    <span className="ml-2 text-black text-l bg-yellow-300 border-2 border-blue-900 rounded-full p-2 shadow-lg shadow-slate-500/40">Aung Mon</span>
-                </p>
-                <p className="text-slate-800 text-l my-4">Full-Stack developer who specializes in PERN, MERN stack, NEXTJS and can easily adapt to new technologies.</p>
-                <p className="text-2xl text-center mb-3">Full-Stack Developer</p>
-                <div className="flex mb-4 justify-center">
-                    <Icon>Download Cv<BsCloudDownload className="inline ml-1 text-xl"/></Icon>
-                    <Icon>Explore Projects<VscSearch className="inline ml-1 text-xl"/></Icon>
+            <section className="flex flex-col justify-center mx-5 pt-5 lg:mx-12 sm:h-[calc(100vh-100px)]">
+                <div className="md:flex">
+                    <div className="flex flex-col items-center">
+                        <p className="">
+                            <span className="text-l text-slate-800">Hello, I Am</span>
+                            <span className="text-xl p-2 text-shadow">Aung Mon</span>
+                        </p>
+                        <p className="text-slate-800 text-l mt-4 px-8">Specializes in PERN, MERN stack, NEXTJS and can easily adapt to new technologies.</p>
+                        <p className="text-2xl mt-6 mb-4 text-center">Full-Stack Developer</p>
+                        <div className="flex mb-4">
+                            <Icon>Download Cv<BsCloudDownload className="inline ml-1 text-xl"/></Icon>
+                            <Icon>Explore Projects<VscSearch className="inline ml-1 text-xl"/></Icon>
+                        </div>
+                    </div>
+                    <div className="flex justify-center">
+                        <img src={phtoto} alt="logo" className="max-w-sm"/>
+                    </div>
                 </div>
-                
-                <div className="flex justify-center">
-                    <img src={phtoto} alt="logo" className="w-42 md:w-96"/>
-                </div>
-                <div className="flex text-2xl justify-center my-5 rounded-full">
-                    <div className="bg-yellow-300 flex p-3 rounded-full">
+                <div className="flex justify-center text-2xl my-5 rounded-full">
+                    <div className="bg-yellow-300 flex p-3 rounded-full shadow-lg">
                         <BsGithub />
                         <BsLinkedin className="mx-10"/>
                         <TfiEmail />
