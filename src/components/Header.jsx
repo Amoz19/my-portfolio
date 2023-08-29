@@ -7,12 +7,6 @@ import { ModelContext } from '../context/ModelContext';
 import { useContext } from 'react';
 import { useEffect } from "react";
 
-const navigation = [
-    ['Home', '/',],
-    ['Experience', '/experience',],
-    ['Projects', '/projects',],
-    ['Contact', '/contact',],
-];
 
 
 const Logo = () => {
@@ -35,21 +29,7 @@ const MenuIcon = () => {
 }
 
 
-const Menu = ({item,style}) => {
-    const {setIsOpen} = useContext(ModelContext);
-    const Menus = item.map(([title, url]) => (
-        <NavLink 
-            to={url} 
-            key={title}
-            className={style}
-            onClick={() => setIsOpen(false)}
-        >
-            {title}
-        </NavLink>
-    ))
 
-    return Menus;
-}
 
 //Create Dark Mode
 const ThemeSwitcher = () => {
@@ -88,19 +68,56 @@ const ThemeSwitcher = () => {
     )
 }
 
+const navigation = [
+    ['Home', '/',],
+    ['Experience', '/experience',],
+    ['Projects', '/projects',],
+    ['Contact', '/contact',],
+];
+
+
+
+const Menu = ({style}) => {
+    const {setIsOpen} = useContext(ModelContext);
+    const Menus = navigation.map(([title, url]) => (
+        <NavLink 
+            to={url} 
+            key={title}
+            className={style}
+            onClick={() => setIsOpen(false)}
+        >
+            {title}
+        </NavLink>
+    ))
+
+    return Menus;
+}
+
+
+const Navigator = ({style,children}) => {
+    return(
+        <>
+            {children}
+             <Menu 
+                style={style}
+        />
+        
+        </>
+       
+        
+    )
+}
+
 
 const DesktopNavigation = () => {
-    const activeClass = ({isActive}) => `
+    const style = ({isActive}) => `
          py-2 px-5 text-center font-medium rounded-full
         ${isActive ? 'bg-white text-black' : 'text-white'}
         `;
     return(
         <>
             <div className='w-auto bg-black py-3 px-4 rounded-full'>
-                <Menu 
-                item={navigation} 
-                style={activeClass}
-                />
+                <Navigator style={style} />
             </div>
         </>
        
@@ -109,7 +126,7 @@ const DesktopNavigation = () => {
 
 const MobileNavigation = () => {
     const {setIsOpen} = useContext(ModelContext);
-    const activeClass = ({isActive}) => `
+    const style = ({isActive}) => `
         px-8 py-3 border-b-2 dark:border-indigo-500/100 hover:text-yellow-800 last:border-b-0 flex 
         ${isActive ? 'dark:text-yellow-500 text-yellow-800' : 'dark:text-white text-black'}
         `;
@@ -117,14 +134,12 @@ const MobileNavigation = () => {
     return(
         <>  
             <div className="dark:bg-zinc-900 dark:text-white rounded-lg">
-                <div className='px-8 py-5 opacity-60 flex justify-between'>
-                    <p>Menu</p>
-                    <RxCross2 onClick={() => setIsOpen(false)}/>
-                </div>
-                <Menu 
-                item={navigation} 
-                style={activeClass}
-                />
+                <Navigator style={style}>
+                    <div className='px-8 py-5 opacity-60 flex justify-between'>
+                        <p>Menu</p>
+                        <RxCross2 onClick={() => setIsOpen(false)}/>
+                    </div>
+                </Navigator>
             </div>
             
         </>
@@ -135,7 +150,6 @@ const MobileNavigation = () => {
  
 const Header = () => {
    const {isOpen} = useContext(ModelContext);
-   console.log(isOpen);
     return ( 
         <nav className="h-[90px] flex items-center justify-between bg-white px-5 lg:px-12 py-3 dark:bg-zinc-800">
             <Logo />

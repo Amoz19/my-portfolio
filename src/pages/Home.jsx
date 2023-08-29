@@ -4,10 +4,10 @@ import { VscSearch } from "react-icons/vsc";
 
 import phtoto from '../assets/programming.svg' 
 
-const Icon = (props) => {
+const Icon = ({children}) => {
     return(
         <button className="border-2 border-blue-900 rounded-full p-2 ml-2 md:ml-5 bg-yellow-300">
-            {props.children}
+            {children}
         </button>
     )
 }
@@ -25,8 +25,12 @@ const Home = () => {
                         <p className="text-slate-800 dark:text-[whitesmoke] text-l mt-1 px-8">Specializes in PERN, MERN stack, NEXTJS and can easily adapt to new technologies.</p>
                         <p className="text-2xl my-4 text-center dark:text-[whitesmoke]">Full-Stack Developer</p>
                         <div className="flex">
-                            <Icon>Download Cv<BsCloudDownload className="inline ml-1 text-xl"/></Icon>
-                            <Icon>Explore Projects<VscSearch className="inline ml-1 text-xl"/></Icon>
+                            <Icon>Download Cv
+                                <BsCloudDownload className="inline ml-1 text-xl"/>
+                            </Icon>
+                            <Icon>Explore Projects
+                                <VscSearch className="inline ml-1 text-xl"/>
+                            </Icon>
                         </div>
                     </div>
                     <div className="flex justify-center my-5">
