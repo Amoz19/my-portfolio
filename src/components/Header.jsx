@@ -134,7 +134,7 @@ const MobileNavigation = () => {
 const Header = () => {
   const { isOpen } = useContext(ModelContext);
   return (
-    <nav className="h-[90px] flex items-center justify-between bg-white px-5 lg:px-12 py-3 dark:bg-zinc-800">
+    <nav className="h-[90px] flex items-center justify-between bg-slate-200 px-5 lg:px-12 py-3 dark:bg-zinc-800">
       <Logo />
       <div className="flex justify-between items-center xl:w-2/4 md:w-3/4">
         <div className="hidden md:flex  bg-black rounded-full">
@@ -148,7 +148,7 @@ const Header = () => {
       <div
         className={`md:hidden ${
           isOpen ? "flex flex-col" : "hidden"
-        } fixed inset-0 backdrop-blur-sm w-full h-screen bg-zinc-800/40`}
+        } fixed z-50 inset-0 backdrop-blur-sm w-full h-screen bg-zinc-800/40`}
       >
         <div className="mx-5 mt-5 flex flex-col bg-[whitesmoke] rounded-lg">
           <MobileNavigation />

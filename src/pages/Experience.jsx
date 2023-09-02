@@ -10,15 +10,26 @@ const ExperienceComponent = () => {
     <React.Fragment key={data.id}>
       <VerticalTimelineElement
         icon={data.icon}
+        iconStyle={{
+          background: "#FFF",
+          color: "#000",
+        }}
+        contentArrowStyle={{
+          borderRight: "7px solid  #2f3963",
+        }}
         contentStyle={{
           background: "#2f3963",
           color: "#FAFAFA",
-          borderRadius: "20px",
         }}
       >
-        <h3>{data.title}</h3>
-        <p>{data.location}</p>
-        <p>{data.description}</p>
+        <div className="space-y-2">
+          <h3 className="text-xl bg-slate-300 inline rounded-xl px-2 py-1 text-slate-700">
+            {data.title}
+          </h3>
+          <p className="text-slate-300">{data.location}</p>
+          <p>{data.description}</p>
+          <p className="border-b-2 inline-block">{data.date}</p>
+        </div>
       </VerticalTimelineElement>
     </React.Fragment>
   ));
