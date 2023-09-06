@@ -5,3 +5,62 @@
 :root {
   --tw-shadow-color: yellow; /* Replace with your desired shadow color */
 }
+
+#react-glass,
+#dayandnight,
+#think,
+#react-cup {
+  animation: react 8s linear infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+#webpage1,
+#webpage2,
+#webpage3 {
+  animation: webpage 2s linear infinite;
+}
+
+#coding {
+  animation: coding 2s linear infinite;
+}
+
+#hand {
+  animation: hand 2s linear infinite;
+}
+
+@keyframes react {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes webpage {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(10px, 0);
+  }
+}
+
+@keyframes coding {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-5px, 0);
+  }
+}
+
+@keyframes hand {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 5px);
+  }
+}

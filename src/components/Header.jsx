@@ -99,7 +99,7 @@ const DesktopNavigation = () => {
         `;
   return (
     <>
-      <div className="w-auto bg-black py-3 px-4 rounded-full">
+      <div className="w-auto bg-black/90 py-3 px-4 rounded-full">
         <Navigator style={style} />
       </div>
     </>
@@ -109,10 +109,10 @@ const DesktopNavigation = () => {
 const MobileNavigation = () => {
   const { setIsOpen } = useContext(ModelContext);
   const style = ({ isActive }) => `
-        px-8 py-3 border-b-2 dark:border-indigo-500/100 hover:text-yellow-800 last:border-b-0 flex 
+        ml-8 py-3 border-b-2 dark:border-white hover:text-yellow-800 last:border-b-0 flex 
         ${
           isActive
-            ? "dark:text-yellow-500 text-yellow-800"
+            ? "dark:text-indigo-500 text-yellow-800"
             : "dark:text-white text-black"
         }
         `;

@@ -23,7 +23,7 @@ const ExperienceComponent = () => {
         }}
       >
         <div className="space-y-2">
-          <h3 className="text-xl bg-slate-300 inline rounded-xl px-2 py-1 text-slate-700">
+          <h3 className="text-l lg:text-xl bg-slate-300 inline rounded-xl px-2 py-1 text-slate-700">
             {data.title}
           </h3>
           <p className="text-slate-300">{data.location}</p>
