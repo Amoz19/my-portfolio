@@ -44,10 +44,10 @@ export const experienceData = [
 
   {
     id: 5,
-    title: "Study Advenced React and Backend Tech",
+    title: "Study Advenced React",
     location: "Self-study",
     description:
-      "Now, I am doing projects and done some you can check on Project Page. Also learning React Advenced Concept and studying Backend Technology",
+      "Now, I am doing projects and done some you can check on Project Page. Also learning React Advenced Concept and studying Backend Technology.",
     icon: React.createElement(BiLogoNodejs),
     date: "2022 - present",
   },

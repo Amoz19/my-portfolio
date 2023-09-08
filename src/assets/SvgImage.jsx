@@ -8,7 +8,7 @@ const SvgImage = () => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <g id="therest">
-        <g id="undraw_programming_re_kg9v 1" clip-path="url(#clip0_1_117)">
+        <g id="undraw_programming_re_kg9v 1" clipPath="url(#clip0_1_117)">
           <g id="dayandnight">
             <g id="night">
               <path

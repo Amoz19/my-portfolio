@@ -99,7 +99,7 @@ const DesktopNavigation = () => {
         `;
   return (
     <>
-      <div className="w-auto bg-black/90 py-3 px-4 rounded-full">
+      <div className="w-auto bg-slate-900 py-3 px-4 rounded-full">
         <Navigator style={style} />
       </div>
     </>

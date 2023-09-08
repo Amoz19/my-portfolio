@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --tw-shadow-color: yellow; /* Replace with your desired shadow color */
+  --tw-shadow-color: blue;
 }
 
 #react-glass,
