@@ -2,12 +2,13 @@ import { BsLinkedin, BsGithub, BsCloudDownload } from "react-icons/bs";
 import { TfiEmail } from "react-icons/tfi";
 import { VscSearch } from "react-icons/vsc";
 import SvgImage from "../assets/SvgImage";
+import Button from "../components/Button";
 
-const Icon = ({ children }) => {
+const IconButton = ({ children }) => {
   return (
-    <button className="border-2 border-blue-700 rounded-full p-2 ml-2 md:ml-5 bg-blue-900 text-white">
+    <Button style='className="border-2 border-blue-700 rounded-full p-2 ml-2 md:ml-5 bg-blue-900 text-white'>
       {children}
-    </button>
+    </Button>
   );
 };
 
@@ -33,14 +34,14 @@ const Home = () => {
               Frontend Developer
             </p>
             <div className="flex">
-              <Icon>
+              <IconButton>
                 Download CV
                 <BsCloudDownload className="inline ml-1 text-xl" />
-              </Icon>
-              <Icon>
+              </IconButton>
+              <IconButton>
                 Explore Projects
                 <VscSearch className="inline ml-1 text-xl" />
-              </Icon>
+              </IconButton>
             </div>
           </div>
           <div className="flex justify-center my-5">
@@ -48,11 +49,11 @@ const Home = () => {
           </div>
         </div>
         <div className="flex justify-center text-2xl rounded-full">
-          <div className="bg-blue-900 text-white flex p-3 rounded-full shadow-lg">
+          <Button style="bg-blue-900 text-white flex p-3 rounded-full shadow-lg">
             <BsGithub />
             <BsLinkedin className="mx-10" />
             <TfiEmail />
-          </div>
+          </Button>
         </div>
       </section>
     </>

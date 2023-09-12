@@ -18,7 +18,7 @@ export const experienceData = [
     title: "Learned Web-Development",
     location: "Self-Study",
     description: "I have been learing web-development over 2-years since 2021",
-    icon: React.createElement(BiLogoReact),
+    icon: React.createElement(BiCodeAlt),
     date: "2021",
   },
 
@@ -28,7 +28,8 @@ export const experienceData = [
     location: "Self-Study",
     description:
       "After doing some projects and have confident in Javascript, I have learned React",
-    icon: React.createElement(BiCodeAlt),
+
+    icon: React.createElement(BiLogoReact),
     date: "2022",
   },
 
@@ -48,7 +49,7 @@ export const experienceData = [
     location: "Self-study",
     description:
       "Now, I am doing projects and done some you can check on Project Page. Also learning React Advenced Concept and studying Backend Technology.",
-    icon: React.createElement(BiLogoNodejs),
+    icon: React.createElement(BiLogoReact),
     date: "2022 - present",
   },
 ];

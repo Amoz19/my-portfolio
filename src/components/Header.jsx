@@ -3,6 +3,7 @@ import { RxCross2 } from "react-icons/rx";
 import { useState, useContext, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { ModelContext } from "../context/ModelContext";
+import Button from "./Button";
 
 const Logo = () => {
   return (
@@ -19,7 +20,7 @@ const MenuIcon = () => {
       className="flex md:hidden items-center bg-white rounded-full py-2 px-4 shadow-sm mr-4"
       onClick={() => setIsOpen(true)}
     >
-      <button className="mr-3">Menu</button>
+      <Button style="mr-3">Menu</Button>
       <BiChevronDown />
     </div>
   );
@@ -34,7 +35,7 @@ const ThemeSwitcher = () => {
 
     const themeToSet = newIsDark ? "dark" : "light";
     window.localStorage.setItem("theme", themeToSet);
-    document.documentElement.classList.toggle("dark", newIsDark);
+    document.documentElement.classList.toggle("dark");
   }
 
   useEffect(() => {
@@ -50,12 +51,12 @@ const ThemeSwitcher = () => {
 
   return (
     <div className="flex items-center">
-      <button
-        className="bg-white rounded-full px-4 py-2 shadow-sm text-stone-950"
-        onClick={toggleTheme}
+      <Button
+        style="bg-white rounded-full px-4 py-2 shadow-sm text-stone-950"
+        handleClick={toggleTheme}
       >
         {isDark ? <BiSolidMoon /> : <BiSun />}
-      </button>
+      </Button>
     </div>
   );
 };
