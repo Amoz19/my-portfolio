@@ -3,6 +3,9 @@ import { BiLogoReact, BiCodeAlt, BiLogoNodejs } from "react-icons/bi";
 import { BsVectorPen } from "react-icons/bs";
 import { MdComputer } from "react-icons/md";
 
+import blogPostShowcase from "../assets/blogpostShowcase.webp";
+import staticSite from "../assets/static.webp";
+
 export const experienceData = [
   {
     id: 1,
@@ -51,5 +54,22 @@ export const experienceData = [
       "Now, I am doing projects and done some you can check on Project Page. Also learning React Advenced Concept and studying Backend Technology.",
     icon: React.createElement(BiLogoReact),
     date: "2022 - present",
+  },
+];
+
+export const projectsData = [
+  {
+    id: 1,
+    projectName: "Blog Post",
+    projectImage: blogPostShowcase,
+    url: "https://blog-post-omega.vercel.app/",
+    githubUrl: "https://github.com/Amoz19/BlogPost",
+  },
+  {
+    id: 2,
+    projectName: "Responsive website with Vanila JS and Css",
+    projectImage: staticSite,
+    url: "https://amoz19.github.io/happylineprojectUpdate",
+    githubUrl: "https://github.com/Amoz19/happylineprojectUpdate",
   },
 ];

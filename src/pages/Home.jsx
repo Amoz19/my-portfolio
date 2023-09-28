@@ -3,6 +3,7 @@ import { TfiEmail } from "react-icons/tfi";
 import { VscSearch } from "react-icons/vsc";
 import SvgImage from "../assets/SvgImage";
 import Button from "../components/Button";
+import { Link } from "react-router-dom";
 
 const IconButton = ({ children }) => {
   return (
@@ -34,14 +35,18 @@ const Home = () => {
               Frontend Developer
             </p>
             <div className="flex">
-              <IconButton>
-                Download CV
-                <BsCloudDownload className="inline ml-1 text-xl" />
-              </IconButton>
+              <Link to={"https://shorturl.at/lqEK3"}>
+                <IconButton>
+                  Download CV
+                  <BsCloudDownload className="inline ml-1 text-xl" />
+                </IconButton>
+              </Link>
+              <Link to={"./Projects"}></Link>
               <IconButton>
                 Explore Projects
                 <VscSearch className="inline ml-1 text-xl" />
               </IconButton>
+              <Link />
             </div>
           </div>
           <div className="flex justify-center my-5">

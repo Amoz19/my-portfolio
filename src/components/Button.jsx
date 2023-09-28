@@ -1,6 +1,6 @@
 const Button = ({ children, style, handleClick }) => {
   return (
-    <button className={style} onClick={handleClick}>
+    <button className={style} onClick={handleClick} href>
       {children}
     </button>
   );
