@@ -1,6 +1,6 @@
 import React from "react";
-import { BiLogoReact, BiCodeAlt, BiLogoNodejs } from "react-icons/bi";
-import { BsVectorPen } from "react-icons/bs";
+import { BiLogoReact, BiCodeAlt } from "react-icons/bi";
+import { BsVectorPen, BsGithub, BsLinkedin, BsVoicemail } from "react-icons/bs";
 import { MdComputer } from "react-icons/md";
 
 import blogPostShowcase from "../assets/blogpostShowcase.webp";
@@ -71,5 +71,23 @@ export const projectsData = [
     projectImage: staticSite,
     url: "https://amoz19.github.io/happylineprojectUpdate",
     githubUrl: "https://github.com/Amoz19/happylineprojectUpdate",
+  },
+];
+
+export const contactData = [
+  {
+    id: 1,
+    url: "",
+    icon: React.createElement(BsGithub),
+  },
+  {
+    id: 2,
+    url: "",
+    icon: React.createElement(BsLinkedin),
+  },
+  {
+    id: 3,
+    url: "",
+    icon: React.createElement(BsVoicemail),
   },
 ];
