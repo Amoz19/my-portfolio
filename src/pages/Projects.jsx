@@ -10,11 +10,13 @@ const Projects = () => {
       <h1 className="dark:text-white text-blue-800 font-bold text-2xl dark:text-shadow my-5 underline">
         Project Showcase
       </h1>
-
       {projectsData.map((data) => (
         <div key={data.id} className="sm:w-3/6 mb-4 text-white">
           <div class="relative group flex flex-col items-center bg-slate-800  rounded-t-md">
-            <img src={data.projectImage} className="w-80 h-80 rounded-t-md" />
+            <img
+              src={data.projectImage}
+              className="w-80 h-80 rounded-t-md object-contain"
+            />
             <a
               href={data.githubUrl}
               class="hidden absolute inset-0 items-center justify-center bg-white bg-opacity-80 text-center text-black group-hover:flex"

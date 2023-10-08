@@ -3,8 +3,9 @@ import { BiLogoReact, BiCodeAlt } from "react-icons/bi";
 import { BsVectorPen, BsGithub, BsLinkedin, BsVoicemail } from "react-icons/bs";
 import { MdComputer } from "react-icons/md";
 
-import blogPostShowcase from "../assets/blogpostShowcase.webp";
-import staticSite from "../assets/static.webp";
+import blogPostShowcase from "../assets/projectImage/blogpostShowcase.webp";
+import staticSite from "../assets/projectImage/static.webp";
+import baydin from "../assets/projectImage/baydin.webp";
 
 export const experienceData = [
   {
@@ -71,6 +72,13 @@ export const projectsData = [
     projectImage: staticSite,
     url: "https://amoz19.github.io/happylineprojectUpdate",
     githubUrl: "https://github.com/Amoz19/happylineprojectUpdate",
+  },
+  {
+    id: 3,
+    projectName: "Burmese Fortune Teller",
+    projectImage: baydin,
+    url: "https://bay-din-app.vercel.app/",
+    githubUrl: "https://github.com/Amoz19/BayDinApp",
   },
 ];
 
