@@ -135,7 +135,7 @@ const MobileNavigation = () => {
 const Header = () => {
   const { isOpen } = useContext(ModelContext);
   return (
-    <nav className="h-[90px] flex items-center justify-between bg-slate-200 px-5 lg:px-12 py-3 dark:bg-zinc-800">
+    <nav className="h-[90px] flex items-center justify-between bg-white px-5 lg:px-12 py-3 dark:bg-zinc-800 sticky top-0">
       <Logo />
       <div className="flex justify-between items-center xl:w-2/4 md:w-3/4">
         <div className="hidden md:flex  bg-black rounded-full">

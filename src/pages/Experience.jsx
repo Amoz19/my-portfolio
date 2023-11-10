@@ -36,9 +36,14 @@ const ExperienceComponent = () => {
 };
 const Experience = () => {
   return (
-    <VerticalTimeline lineColor={"darkblue"}>
-      <ExperienceComponent />
-    </VerticalTimeline>
+    <>
+      <h1 className="flex justify-center text-2xl py-2 font-black">
+        Experiences<span className="text-5xl">🎖️</span>
+      </h1>
+      <VerticalTimeline lineColor={"darkblue"}>
+        <ExperienceComponent />
+      </VerticalTimeline>
+    </>
   );
 };
 
