@@ -5,7 +5,7 @@ import SvgImage from "../assets/SvgImage";
 import Button from "../components/Button";
 import { Link } from "react-router-dom";
 import { twMerge } from "tailwind-merge";
-import { MaterialSymbolsCloudDownloadRounded } from "../assets/icons/frontendIcon";
+// import { MaterialSymbolsCloudDownloadRounded } from "../assets/icons/frontendIcon";
 
 const IconButton = ({ children, style }) => {
   return (
@@ -42,7 +42,7 @@ const Home = () => {
               <Link to={"https://shorturl.at/lqEK3"}>
                 <IconButton style="bg-blue-600 text-white transition hover:bg-white hover:text-black">
                   Download CV
-                  <MaterialSymbolsCloudDownloadRounded className="inline ml-3 text-xl" />
+                  {/* <MaterialSymbolsCloudDownloadRounded className="inline ml-3 text-xl" /> */}
                 </IconButton>
               </Link>
               <Link to="./projects">

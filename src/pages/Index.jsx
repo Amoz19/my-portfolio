@@ -2,6 +2,7 @@ import React from "react";
 import Home from "./Home";
 import Experience from "./Experience";
 import MyTools from "./MyTools";
+import Projects from "./Projects";
 
 const Index = () => {
   return (
@@ -9,6 +10,7 @@ const Index = () => {
       <Home />
       {/* <Experience /> */}
       <MyTools />
+      <Projects />
     </>
   );
 };

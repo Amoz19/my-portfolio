@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Galada&family=Poppins&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -68,4 +69,25 @@ body {
   100% {
     transform: translate(0, 5px);
   }
+}
+
+.background {
+  background: linear-gradient(
+    152deg,
+    rgba(246, 243, 255, 0) -63.66%,
+    rgba(233, 236, 245, 0.88) -14.69%,
+    rgba(18, 45, 183, 0.42) 24.42%
+  );
+}
+
+.background-1 {
+  background: linear-gradient(
+    154deg,
+    rgba(255, 255, 255, 0.38) 58.17%,
+    rgba(241, 205, 205, 0) 70.32%
+  );
+}
+
+.title {
+  font-family: "Audiowide", sans-serif;
 }

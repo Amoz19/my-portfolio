@@ -63,9 +63,9 @@ const ThemeSwitcher = () => {
 
 const navigation = [
   ["Home", "/"],
-  ["Experience", "/experience"],
-  ["Projects", "/projects"],
-  ["Contact", "/contact"],
+  ["Skills", "/skills"],
+  ["Projects", "#"],
+  ["Contact", "#"],
 ];
 
 const Menu = ({ style }) => {
