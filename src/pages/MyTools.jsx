@@ -24,6 +24,7 @@ import ToolsCards from "../components/ToolsCards";
 const tools = [
   {
     title: "Frontend Development",
+    titleColor: "text-blue-500",
 
     techs: [
       {
@@ -55,6 +56,7 @@ const tools = [
   },
   {
     title: "Backend Development",
+    titleColor: "text-blue-500/90",
     techs: [
       {
         icon: <RiNodejsFill />,
@@ -80,6 +82,7 @@ const tools = [
   },
   {
     title: "Other Tools",
+    titleColor: "text-blue-500/80",
     techs: [
       {
         icon: <PhFigmaLogoDuotone />,
@@ -104,14 +107,16 @@ const tools = [
 
 const MyTools = () => {
   return (
-    <div className="my-5">
-      <h1 className="flex justify-center text-3xl  font-black my-3 text-blue-600">
+    <div className="my-16">
+      <h1 className="flex justify-center text-3xl  font-black my-3 text-primary">
         My Tools<span className="text-4xl">✍️</span>
       </h1>
       <div className="mx-20">
         {tools.map((tool) => (
           <div key={tool.title} className="my-5">
-            <h1 className={`text-xl font-semibold`}>{tool.title}</h1>
+            <h1 className={`text-xl font-semibold ${tool.titleColor}`}>
+              {tool.title}
+            </h1>
             <ToolsCards data={tool.techs} />
           </div>
         ))}

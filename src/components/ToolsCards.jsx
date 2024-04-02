@@ -2,15 +2,14 @@ import { useState, useRef } from "react";
 import useHover from "../hooks/useHover";
 
 const ToolsCards = ({ data }) => {
-  const [hoveredIndex, setHoveredIndex] = useState(null); // State to keep track of hovered index
-  const elementRefs = useRef(data.map(() => useRef())); // Refs for each element
+  const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const handleMouseEnter = (index) => {
-    setHoveredIndex(index); // Set hovered index when mouse enters
+    setHoveredIndex(index);
   };
 
   const handleMouseLeave = () => {
-    setHoveredIndex(null); // Reset hovered index when mouse leaves
+    setHoveredIndex(null);
   };
 
   return (
@@ -18,7 +17,7 @@ const ToolsCards = ({ data }) => {
       {data.map((result, i) => (
         <div
           key={i}
-          className="flex flex-col p-2 rounded-md mr-3 "
+          className="flex flex-col p-2 rounded-md mr-3 dark:text-white"
           onMouseEnter={() => handleMouseEnter(i)}
           onMouseLeave={handleMouseLeave}
         >
@@ -31,7 +30,6 @@ const ToolsCards = ({ data }) => {
               className={`${
                 hoveredIndex === i && `${result.color} font-900`
               } text-5xl flex justify-center`}
-              ref={elementRefs.current[i]}
             >
               {result.icon}
             </p>
