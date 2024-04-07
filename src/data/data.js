@@ -3,9 +3,10 @@ import { BiLogoReact, BiCodeAlt } from "react-icons/bi";
 import { BsVectorPen, BsGithub, BsLinkedin, BsVoicemail } from "react-icons/bs";
 import { MdComputer } from "react-icons/md";
 
-import blogPostShowcase from "../assets/projectImage/blogpostShowcase.webp";
-import staticSite from "../assets/projectImage/static.webp";
-import baydin from "../assets/projectImage/baydin.webp";
+import blogPostShowcase from "/blog.png";
+import staticSite from "/happyLine.png";
+import baydin from "/bayDin.png";
+import habitTracker from "/habitTracker.png";
 
 export const experienceData = [
   {
@@ -60,25 +61,78 @@ export const experienceData = [
 
 export const projectsData = [
   {
-    id: 1,
-    projectName: "Blog Post",
-    projectImage: blogPostShowcase,
-    url: "https://blog-post-omega.vercel.app/",
-    githubUrl: "https://github.com/Amoz19/BlogPost",
+    id: 3,
+    projectName: "Habit Tracker",
+    projectDescription: {
+      title: "Web application that help to consisstant with  your habits",
+      features: [
+        { id: 1, feature: "User can create habits" },
+        { id: 2, feature: "Make it done your habits from habit calendar" },
+        { id: 3, feature: "Easily track your  progress" },
+        { id: 4, feature: "Fully responsive and flowless user experience" },
+      ],
+    },
+    projectImage: habitTracker,
+    url: "https://bay-din-app.vercel.app/",
+    githubUrl: "https://github.com/Amoz19/BayDinApp",
+    stack: [
+      "React",
+      "TailwindCSS",
+      "React Query",
+      "ExpressJS",
+      "MongoDB",
+      "JWT",
+    ],
   },
   {
-    id: 2,
+    id: 1,
     projectName: "Responsive website with Vanila JS and Css",
+    projectDescription: {
+      title: "My first client project developed by Nanospace",
+      features: [
+        { id: 1, feature: "Beautiful UI" },
+        {
+          id: 2,
+          feature: "Most of them are implemented by vanlina JS and Css",
+        },
+      ],
+    },
     projectImage: staticSite,
     url: "https://amoz19.github.io/happylineprojectUpdate",
     githubUrl: "https://github.com/Amoz19/happylineprojectUpdate",
+    stack: ["HTML", "CSS", "Javascript"],
   },
   {
-    id: 3,
+    id: 2,
     projectName: "Burmese Fortune Teller",
+    projectDescription: {
+      title: "This is a responsive website with vanila JS and CSS",
+      features: [
+        { id: 1, feature: "Pagination" },
+        { id: 2, feature: "React router as a replacement of useState hook" },
+      ],
+    },
     projectImage: baydin,
     url: "https://bay-din-app.vercel.app/",
     githubUrl: "https://github.com/Amoz19/BayDinApp",
+    stack: ["React", "TailwindCSS", "React Router"],
+  },
+
+  {
+    id: 4,
+    projectName: "Blog Post",
+    projectDescription: {
+      title: "This is a responsive website with vanila JS and CSS",
+      features: [
+        { id: 1, feature: "UnAuthenticated users can read the blog posts" },
+        { id: 2, feature: "Admin CRUD" },
+        { id: 2, feature: "Firebase Auth for authentication." },
+      ],
+    },
+    projectImage: blogPostShowcase,
+    url: "https://blog-post-omega.vercel.app/",
+    githubUrl: "https://github.com/Amoz19/BlogPost",
+    stack: ["NextJS", "TailwindCSS", "Firebase", "Firebase Auth"],
   },
 ];
 

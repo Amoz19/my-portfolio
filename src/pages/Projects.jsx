@@ -3,40 +3,74 @@ import { projectsData } from "../data/data";
 import { BsGithub } from "react-icons/bs";
 import { TbLivePhoto } from "react-icons/tb";
 import { Link } from "react-router-dom";
+import Button from "../components/Button";
+import { useNavigate } from "react-router-dom";
 
 const Projects = () => {
+  const navigate = useNavigate();
   return (
-    <div className="flex flex-col items-center">
-      <h1 className="dark:text-white text-blue-800 font-bold text-2xl dark:text-shadow my-5 underline">
+    <>
+      <h1 className="dark:text-white text-primary font-black text-3xl dark:text-shadow my-5 text-center">
         Project Showcase
       </h1>
-      {projectsData.map((data) => (
-        <div key={data.id} className="sm:w-3/6 mb-4 text-white">
-          <div class="relative group flex flex-col items-center bg-slate-800  rounded-t-md">
-            <img
-              src={data.projectImage}
-              className="w-80 h-80 rounded-t-md object-contain"
-            />
-            <a
-              href={data.githubUrl}
-              class="hidden absolute inset-0 items-center justify-center bg-white bg-opacity-80 text-center text-black group-hover:flex"
-            >
-              <p className="text-5xl">{React.createElement(BsGithub)}</p>
-            </a>
+      <div className="w-3/4 m-auto grid grid-cols-2 gap-8 ">
+        {projectsData.map((data) => (
+          <div
+            key={data.id}
+            className="mb-4 border border-blue-100  rounded-md shadow-lg bg-white  py-7 "
+          >
+            <div className="flex flex-col items-center rounded-t-lg">
+              <img
+                src={data.projectImage}
+                className="rounded-t-md object-cover w-3/4"
+              />
+            </div>
+            <div className="w-3/4  m-auto flex justify-center flex-wrap text-xs mt-2  ">
+              {data.stack.map((stack) => (
+                <div key={stack} className="">
+                  <div>
+                    <button className=" text-white bg-slate-800 rounded-full px-2 py-1 m-2">{`${stack}`}</button>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="w-3/4 mx-auto mt-3">
+              <div className="">
+                <h1 className="text-l font-semibold">{data.projectName}</h1>
+                <p className="text-sm text-secondary my-1">
+                  {data.projectDescription.title}
+                </p>
+              </div>
+              <div className="mt-3">
+                {data.projectDescription.features.map((feature) => (
+                  <ul
+                    key={feature.id}
+                    className="list-disc list-outside text-sm"
+                  >
+                    <li>{feature.feature}</li>
+                  </ul>
+                ))}
+              </div>
+
+              <div className="flex justify-between w-2/3 m-auto text-white mt-6">
+                <Button
+                  style="bg-primary rounded px-3 py-1"
+                  handleClick={() => window.open(data.url, "_blank")}
+                >
+                  LIVE
+                </Button>
+                <Button
+                  style="bg-secondary rounded px-3 py-1"
+                  handleClick={() => window.open(data.githubUrl, "_blank")}
+                >
+                  Source Code
+                </Button>
+              </div>
+            </div>
           </div>
-          <div className="flex justify-around py-3 bg-[#2f3963] items-center">
-            <h2 className="w-2/3 text-l">{data.projectName}</h2>
-            <Link to={data.url}>
-              <button className="flex items-center">
-                <p className="px-1">Live Demo</p>
-                <p className="text-2xl">{React.createElement(TbLivePhoto)}</p>
-              </button>
-            </Link>
-          </div>
-          <hr className="w-1/6 m-auto bg-blue-500 h-1 border-0 rounded" />
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+    </>
   );
 };
 

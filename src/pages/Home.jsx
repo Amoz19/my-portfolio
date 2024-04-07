@@ -5,14 +5,15 @@ import SvgImage from "../assets/SvgImage";
 import Button from "../components/Button";
 import { Link } from "react-router-dom";
 import { twMerge } from "tailwind-merge";
-import { MaterialSymbolsCloudDownloadRounded } from "../assets/icons/frontendIcon";
+// import { MaterialSymbolsCloudDownloadRounded } from "../assets/icons/frontendIcon";
 
-const IconButton = ({ children, style }) => {
+const IconButton = ({ children, style, handleCLick }) => {
   return (
     <Button
       style={twMerge(
         `border border-blue-600 rounded-lg p-3 mr-2 md:mr-5 hover:bg-blue-600 hover:text-white ${style} dark:text-white `
       )}
+      handleClick={handleCLick}
     >
       {children}
     </Button>
@@ -39,12 +40,17 @@ const Home = () => {
               development.{" "}
             </p>
             <div className="flex">
-              <Link to={"https://shorturl.at/lqEK3"}>
-                <IconButton style="bg-blue-600 text-white transition hover:bg-white hover:text-black">
-                  Download CV
-                  <MaterialSymbolsCloudDownloadRounded className="inline ml-3 text-xl" />
-                </IconButton>
-              </Link>
+              <IconButton
+                style="bg-blue-600 text-white transition hover:bg-white hover:text-black"
+                handleCLick={() =>
+                  window.open(
+                    "https://drive.google.com/file/d/1IS-MUFQnaKPE5NFEP6DS_MIqgqhxc6Bf/view?usp=sharing",
+                    "_blank"
+                  )
+                }
+              >
+                Download CV
+              </IconButton>
               <Link to="./projects">
                 <IconButton>
                   Explore Projects

@@ -63,9 +63,9 @@ const ThemeSwitcher = () => {
 
 const navigation = [
   ["Home", "/"],
-  ["Experience", "/experience"],
+  ["Skills", "/skills"],
   ["Projects", "/projects"],
-  ["Contact", "/contact"],
+  ["Contact", "/Contact"],
 ];
 
 const Menu = ({ style }) => {
@@ -149,7 +149,7 @@ const Header = () => {
       <div
         className={`md:hidden ${
           isOpen ? "flex flex-col" : "hidden"
-        } fixed z-50 inset-0 backdrop-blur-sm w-full h-screen bg-zinc-800/40`}
+        } fixed -z-100 inset-0 backdrop-blur-sm w-full h-screen bg-zinc-800/40`}
       >
         <div className="mx-5 mt-5 flex flex-col bg-[whitesmoke] rounded-lg">
           <MobileNavigation />
