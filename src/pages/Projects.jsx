@@ -10,7 +10,7 @@ const Projects = () => {
   const navigate = useNavigate();
   return (
     <>
-      <h1 className="dark:text-white text-primary font-black text-3xl dark:text-shadow my-5 text-center">
+      <h1 className="dark:text-white text-primary font-black text-3xl dark:text-shadow my-5 text-center ">
         Project Showcase
       </h1>
       <div className="w-3/4 m-auto grid grid-cols-2 gap-8 ">

@@ -107,7 +107,7 @@ const tools = [
 
 const MyTools = () => {
   return (
-    <div className="my-16">
+    <>
       <h1 className="flex justify-center text-3xl  font-black my-3 text-primary">
         My Tools<span className="text-4xl">✍️</span>
       </h1>
@@ -121,7 +121,7 @@ const MyTools = () => {
           </div>
         ))}
       </div>
-    </div>
+    </>
   );
 };
 

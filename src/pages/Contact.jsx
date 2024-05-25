@@ -5,7 +5,7 @@ import Button from "../components/Button";
 const Contact = () => {
   return (
     <>
-      <div className="h-[calc(100vh-90px)] flex justify-center  text-white ">
+      <div className="h-[100vh] flex justify-center  text-white">
         <div className="flex flex-col justify-center">
           <h4 className="dark:text-white text-blue-600 dark:text-shadow font-bold my-5 text-3xl text-center">
             Reach me out

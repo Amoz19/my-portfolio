@@ -23,7 +23,10 @@ const IconButton = ({ children, style, handleCLick }) => {
 const Home = () => {
   return (
     <>
-      <section className="flex flex-col justify-center px-5 pt-5 lg:mx-12 h-[calc(100vh-90px)] dark:bg-zinc-900 rounded-lg">
+      <section
+        id="home"
+        className="flex flex-col justify-center px-5 pt-5 lg:mx-12 h-[calc(100vh-90px)] dark:bg-zinc-900 rounded-lg"
+      >
         <div className="md:flex">
           <div className="flex flex-col">
             <p className="text-xl text-slate-800 dark:text-[whitesmoke]">

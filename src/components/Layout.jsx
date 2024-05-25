@@ -3,7 +3,7 @@ import Header from "./Header";
 const Layout = () => {
   return (
     <div className="bg-slate-100 dark:bg-zinc-900">
-      <Header />
+      {/* <Header /> */}
       <Outlet />
     </div>
   );
