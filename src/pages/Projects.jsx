@@ -1,22 +1,16 @@
-import React from "react";
 import { projectsData } from "../data/data";
-import { BsGithub } from "react-icons/bs";
-import { TbLivePhoto } from "react-icons/tb";
-import { Link } from "react-router-dom";
 import Button from "../components/Button";
-import { useNavigate } from "react-router-dom";
 
 const Projects = () => {
-  const navigate = useNavigate();
   return (
     <>
       <h1 className="dark:text-white text-primary font-black text-3xl dark:text-shadow my-5 text-center ">
         Project Showcase
       </h1>
-      <div className="w-3/4 m-auto grid grid-cols-2 gap-8 ">
+      <div className="w-3/4 m-auto grid lg:grid-cols-2 grid-cols-1  gap-8 ">
         {projectsData.map((data) => (
           <div
-            key={data.id}
+            key={data.projectName}
             className="mb-4 border border-blue-100  rounded-md shadow-lg bg-white  py-7 "
           >
             <div className="flex flex-col items-center rounded-t-lg">
@@ -44,7 +38,7 @@ const Projects = () => {
               <div className="mt-3">
                 {data.projectDescription.features.map((feature) => (
                   <ul
-                    key={feature.id}
+                    key={feature.feature}
                     className="list-disc list-outside text-sm"
                   >
                     <li>{feature.feature}</li>
@@ -52,15 +46,15 @@ const Projects = () => {
                 ))}
               </div>
 
-              <div className="flex justify-between w-2/3 m-auto text-white mt-6">
+              <div className="flex justify-between w-full lg:w-2/3 m-auto text-white mt-6">
                 <Button
-                  style="bg-primary rounded px-3 py-1"
+                  style="bg-primary rounded px-2   lg:px-3 py-1"
                   handleClick={() => window.open(data.url, "_blank")}
                 >
                   LIVE
                 </Button>
                 <Button
-                  style="bg-secondary rounded px-3 py-1"
+                  style="bg-secondary rounded px-2 lg:px-3 py-1"
                   handleClick={() => window.open(data.githubUrl, "_blank")}
                 >
                   Source Code

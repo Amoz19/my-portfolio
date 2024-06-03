@@ -62,10 +62,10 @@ const ThemeSwitcher = () => {
 };
 
 const navigation = [
-  ["Home", "#"],
-  ["Skills", "#skills"],
-  ["Projects", "#projects"],
-  ["Contact", "#contact"],
+  ["Home", "/"],
+  ["Skills", "/skills"],
+  ["Projects", "/projects"],
+  ["Contact", "/contact"],
 ];
 
 const Menu = ({ style }) => {

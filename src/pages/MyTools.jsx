@@ -107,21 +107,21 @@ const tools = [
 
 const MyTools = () => {
   return (
-    <>
-      <h1 className="flex justify-center text-3xl  font-black my-3 text-primary">
+    <div className="min-h-[100vh]">
+      <h1 className="flex justify-center text-3xl  font-black my-3 text-primary dark:text-shadow dark:text-white">
         My Tools<span className="text-4xl">✍️</span>
       </h1>
-      <div className="mx-20">
+      <div className="lg:mx-20">
         {tools.map((tool) => (
           <div key={tool.title} className="my-5">
-            <h1 className={`text-xl font-semibold ${tool.titleColor}`}>
+            <h1 className={`text-xl text-center lg:text-left dark:text-shadow font-semibold ${tool.titleColor}`}>
               {tool.title}
             </h1>
             <ToolsCards data={tool.techs} />
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 
